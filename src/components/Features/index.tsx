@@ -9,7 +9,7 @@ const Features = () => {
         <SectionTitle
           subtitle="Features"
           title="Main Features Of Joker Relay"
-          paragraph="There are many features of Joker Relay."
+          paragraph="Why Choose Joker Relay?"
         />
 
         <div className="-mx-4 mt-12 flex flex-wrap lg:mt-20">

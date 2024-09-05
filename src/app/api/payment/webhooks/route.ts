@@ -44,20 +44,18 @@ export async function POST(req: Request) {
 
           await upsertUserSubscription({
             subscriptionId: subscription.id,
-            customerEmail: subscription.customer as string,
+            customerEmail: "",
             isCreateAction: false,
           });
           break;
         case 'checkout.session.completed':
           const checkoutSession = event.data.object as Stripe.Checkout.Session;
 
-          console.log("Checkout completed")
-
           if (checkoutSession.mode === 'subscription') {
             const subscriptionId = checkoutSession.subscription;
             await upsertUserSubscription({
               subscriptionId: subscriptionId as string,
-              customerEmail: checkoutSession.customer as string,
+              customerEmail: checkoutSession?.customer_details?.email as string,
               isCreateAction: true,
             });
           }
@@ -72,6 +70,7 @@ export async function POST(req: Request) {
       });
     }
   }
+  return Response.json({ received: true });
 }
 
 

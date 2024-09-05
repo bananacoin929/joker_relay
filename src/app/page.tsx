@@ -10,8 +10,8 @@ import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Play Next.js - SaaS Starter Kit and Boilerplate for Next.js",
-  description: "Free Next.js SaaS Boilerplate and Starter Kit designed and built for SaaS startups. It comes with all necessary integrations, pages, and components you need to launch a feature-rich SaaS websites.",
+  title: "Transform Your Amazon Relay Operations with Joker Relay",
+  description: "Unlock the Power of Automated Trip Booking – Save Time, Boost Efficiency, and Maximize Profits with Our Easy-to-Use Extension!",
 };
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
       <CallToAction />
       <Pricing />
       <Faq />
-      <Contact />
+      {/* <Contact /> */}
     </main>
   );
 }

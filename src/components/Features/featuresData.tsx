@@ -17,8 +17,8 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "Refresher",
-    paragraph: 'Automatically reloads Amazon Relay Load Board (relay.amazon.com) in millisecond (ms).',
+    title: "Automated Trip Booking",
+    paragraph: 'Say goodbye to the hassle of manual bookings. Our smart automation technology handles all your Amazon Relay trip bookings seamlessly.',
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -38,8 +38,8 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "Randomizer",
-    paragraph: 'Built-in AI stealth technology that analyzes the reload speed and adjusts itself to randomly slow down and speed up the refresh rate to mimic a human dispatcher.',
+    title: "Cost-Effective Solution",
+    paragraph: 'Enjoy premium features at an affordable monthly fee, designed to fit any budget while maximizing your operational efficiency.',
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -91,8 +91,8 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "Payout",
-    paragraph: "Set the minimum Gross payout you are willing to haul. Flash Relay will choose the loads that are above your minimum requested payout.",
+    title: "User-Friendly Interface",
+    paragraph: "No tech skills? No problem! Our intuitive design ensures anyone can set up and start using Joker Relay in minutes.",
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -124,10 +124,11 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "Rate",
-    paragraph: 'Set the minimum per-mile rate to make your run worthwhile and book the “hot loads." This feature can be used together with the “Payout".',
+    title: "Real-Time Alerts",
+    paragraph: 'Stay in the loop with instant notifications about your trip bookings, allowing you to manage your fleet proactively.',
     btn: "Learn More",
     btnLink: "/#",
   },
+  
 ];
 export default featuresData;

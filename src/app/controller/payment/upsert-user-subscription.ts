@@ -21,11 +21,22 @@ export async function upsertUserSubscription({
 
   // const { id: userId } = customerData!;
 
-  const userEmail = customerEmail;
+  let userEmail = customerEmail;
 
   const subscription = await stripeAdmin.subscriptions.retrieve(subscriptionId, {
     expand: ['default_payment_method'],
   });
+
+  if (!isCreateAction) {
+    const { data, error: noSubscriptionError } = await supabaseAdminClient
+    .from('subscriptions')
+    .select('user_email')
+    .eq('id', subscription.id)
+    .single()
+
+    if (noSubscriptionError) throw noSubscriptionError;
+    userEmail = data.user_email
+  }
 
   // Upsert the latest status of the subscription object.
   const subscriptionData = {
@@ -45,8 +56,9 @@ export async function upsertUserSubscription({
     trial_end: subscription.trial_end ? toDateTime(subscription.trial_end).toISOString() : null,
   };
 
+
   const data = await supabaseAdminClient.from('subscriptions').upsert([subscriptionData]);
-  console.log(data, isCreateAction)
+
   if (data.error) {
     throw data.error;
   }

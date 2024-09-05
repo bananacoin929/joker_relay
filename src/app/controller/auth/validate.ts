@@ -1,9 +1,5 @@
-import Stripe from 'stripe';
 import { stripeAdmin } from '@/libs/stripe/stripe-admin';
 import { supabaseAdminClient } from '@/libs/supabase/supabase-admin';
-import type { Database } from '@/libs/supabase/types';
-import { toDateTime } from '@/utils/to-date-time';
-import { AddressParam } from '@stripe/stripe-js';
 
 export async function validateUser({
   customerEmail
@@ -17,7 +13,7 @@ export async function validateUser({
     .eq('user_email', customerEmail)
 
   if (noSubscriptionError) throw noSubscriptionError
-  
+
   if (!subscriptionData.length) return false;
 
   const { id: subscriptionId } = subscriptionData[0];
@@ -26,8 +22,8 @@ export async function validateUser({
     expand: ['default_payment_method'],
   });
 
-  const currentTime = new Date().getTime();  
+  const currentTime = new Date().getTime() / 1000;
 
-  return Boolean(subscription.current_period_start - currentTime > 0);
+  return Boolean(subscription.current_period_end - currentTime > 0);
 
 }
