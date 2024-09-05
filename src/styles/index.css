@@ -8,6 +8,14 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.bg-primary{
+  background-color: #3d348b !important;
+}
+
+.logo{
+  width:60% !important;
+}
+
 .sticky-menu .navbar-logo {
   @apply py-2;
 }
