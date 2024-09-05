@@ -42,7 +42,6 @@ export async function POST(req: Request) {
         case 'customer.subscription.deleted':
           const subscription = event.data.object as Stripe.Subscription;
 
-          console.log(subscription);
           await upsertUserSubscription({
             subscriptionId: subscription.id,
             customerEmail: subscription.customer as string,
@@ -51,6 +50,8 @@ export async function POST(req: Request) {
           break;
         case 'checkout.session.completed':
           const checkoutSession = event.data.object as Stripe.Checkout.Session;
+
+          console.log("Checkout completed")
 
           if (checkoutSession.mode === 'subscription') {
             const subscriptionId = checkoutSession.subscription;
