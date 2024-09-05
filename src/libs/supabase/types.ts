@@ -114,12 +114,11 @@ export interface Database {
           ended_at: string | null;
           id: string;
           metadata: Json | null;
-          price_id: string | null;
           quantity: number | null;
           status: Database['public']['Enums']['subscription_status'] | null;
           trial_end: string | null;
           trial_start: string | null;
-          user_id: string;
+          user_email: string;
         };
         Insert: {
           cancel_at?: string | null;
@@ -131,12 +130,11 @@ export interface Database {
           ended_at?: string | null;
           id: string;
           metadata?: Json | null;
-          price_id?: string | null;
           quantity?: number | null;
           status?: Database['public']['Enums']['subscription_status'] | null;
           trial_end?: string | null;
           trial_start?: string | null;
-          user_id: string;
+          user_email: string;
         };
         Update: {
           cancel_at?: string | null;
@@ -148,29 +146,12 @@ export interface Database {
           ended_at?: string | null;
           id?: string;
           metadata?: Json | null;
-          price_id?: string | null;
           quantity?: number | null;
           status?: Database['public']['Enums']['subscription_status'] | null;
           trial_end?: string | null;
           trial_start?: string | null;
-          user_id?: string;
+          user_email?: string;
         };
-        Relationships: [
-          {
-            foreignKeyName: 'subscriptions_price_id_fkey';
-            columns: ['price_id'];
-            isOneToOne: false;
-            referencedRelation: 'prices';
-            referencedColumns: ['id'];
-          },
-          {
-            foreignKeyName: 'subscriptions_user_id_fkey';
-            columns: ['user_id'];
-            isOneToOne: false;
-            referencedRelation: 'users';
-            referencedColumns: ['id'];
-          }
-        ];
       };
       users: {
         Row: {
