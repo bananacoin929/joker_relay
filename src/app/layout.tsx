@@ -34,7 +34,6 @@ export default function RootLayout({
         {loading ? (
           <PreLoader />
         ) : (
-          <SessionProvider>
             <ThemeProvider
               attribute="class"
               enableSystem={false}
@@ -46,7 +45,6 @@ export default function RootLayout({
               <Footer />
               <ScrollToTop />
             </ThemeProvider>
-          </SessionProvider>
         )}
       </body>
     </html>

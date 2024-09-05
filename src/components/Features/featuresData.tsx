@@ -17,8 +17,8 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "Free and Open-Source",
-    paragraph: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    title: "Refresher",
+    paragraph: 'Automatically reloads Amazon Relay Load Board (relay.amazon.com) in millisecond (ms).',
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -38,8 +38,8 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "Modern Design",
-    paragraph: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    title: "Randomizer",
+    paragraph: 'Built-in AI stealth technology that analyzes the reload speed and adjusts itself to randomly slow down and speed up the refresh rate to mimic a human dispatcher.',
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -91,8 +91,8 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "SaaS Starter Kit",
-    paragraph: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    title: "Payout",
+    paragraph: "Set the minimum Gross payout you are willing to haul. Flash Relay will choose the loads that are above your minimum requested payout.",
     btn: "Learn More",
     btnLink: "/#",
   },
@@ -124,8 +124,8 @@ const featuresData: Feature[] = [
         />
       </svg>
     ),
-    title: "All Essential Integrations",
-    paragraph: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    title: "Rate",
+    paragraph: 'Set the minimum per-mile rate to make your run worthwhile and book the “hot loads." This feature can be used together with the “Payout".',
     btn: "Learn More",
     btnLink: "/#",
   },
