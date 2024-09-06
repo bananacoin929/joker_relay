@@ -53,93 +53,50 @@ const Contact = () => {
                       How Can We Help?
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                    support@jokerrelay.com
+                      support@jokerrelay.com
                     </p>
                     <p className="mt-1 text-base text-body-color dark:text-dark-6">
-                    (123) 456-7890
+                      (123) 456-7890
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
             <div
-              className="wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]"
+              className="wow fadeInUp rounded-lg bg-white px-4 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-4 lg:px-6 lg:py-12 2xl:p-[50px]"
               data-wow-delay=".2s
               "
             >
-              <h3 className="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
-                Send us a Message
+              <h3 className="mb-8 text-2xl text-center font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
+                Refund Policy
               </h3>
-              <form>
-                <div className="mb-[22px]">
-                  <label
-                    htmlFor="fullName"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
-                    Full Name*
-                  </label>
-                  <input
-                    type="text"
-                    name="fullName"
-                    placeholder="Adam Gelius"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                  />
-                </div>
-                <div className="mb-[22px]">
-                  <label
-                    htmlFor="email"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
-                    Email*
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="example@yourmail.com"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                  />
-                </div>
-                <div className="mb-[22px]">
-                  <label
-                    htmlFor="phone"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
-                    Phone*
-                  </label>
-                  <input
-                    type="text"
-                    name="phone"
-                    placeholder="+885 1254 5211 552"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                  />
-                </div>
-                <div className="mb-[30px]">
-                  <label
-                    htmlFor="message"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
-                    Message*
-                  </label>
-                  <textarea
-                    name="message"
-                    rows={1}
-                    placeholder="type your message here"
-                    className="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                  ></textarea>
-                </div>
-                <div className="mb-0">
-                  <button
-                    type="submit"
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90"
-                  >
-                    Send
-                  </button>
-                </div>
-              </form>
+              <div className="mb-[10px]">
+                <p>At Joker Relay, we are committed to ensuring customer satisfaction.
+                </p>
+              </div>
+              <div className="mb-[10px]">
+                <p>However, if you are not completely satisfied with our service, we offer the following refund policy.</p>
+              </div>
+
+              <div className="mb-[10px]">
+                <p>There are Eligibility for Refunds, Terms and Conditions Policy.</p>
+              </div>
+              <div className="mb-[30px]">
+                <p>Please download the document and check the relevant contents.</p>
+              </div>
+              <div className="mb-0">
+                <button
+                  className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90"
+                >
+                  Get Document
+                </button>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

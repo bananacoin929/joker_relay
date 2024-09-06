@@ -190,7 +190,7 @@ const Footer = () => {
                     href="/#"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
-                    FAQ
+                    HELP
                   </a>
                 </li>
                 <li>

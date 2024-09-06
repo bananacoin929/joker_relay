@@ -62,7 +62,7 @@ const Header = () => {
                     <Image
                       src={`/images/logo/logo.png`}
                       alt="logo"
-                      width={30}
+                      width={100}
                       height={30}
                       style={{ width: "50%" }}
                       className="header-logo w-full dark:hidden"
@@ -70,7 +70,7 @@ const Header = () => {
                     <Image
                       src={`/images/logo/logo-white.png`}
                       alt="logo"
-                      width={240}
+                      width={100}
                       height={30}
                       style={{ width: "50%" }}
                       className="header-logo hidden w-full dark:block"
@@ -84,7 +84,7 @@ const Header = () => {
                         : "/images/logo/logo-white.png"
                         }`}
                       alt="logo"
-                      width={140}
+                      width={100}
                       height={30}
                       style={{ width: "50%" }}
                       className="header-logo w-full dark:hidden"
@@ -92,7 +92,7 @@ const Header = () => {
                     <Image
                       src={"/images/logo/logo-white.png"}
                       alt="logo"
-                      width={140}
+                      width={100}
                       height={30}
                       style={{ width: "50%" }}
                       className="header-logo hidden w-full dark:block"
