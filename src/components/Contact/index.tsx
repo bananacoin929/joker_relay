@@ -71,28 +71,33 @@ const Contact = () => {
               "
             >
               <h3 className="mb-8 text-2xl text-center font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
-                Refund Policy
+                Policy
               </h3>
               <div className="mb-[10px]">
-                <p>At Joker Relay, we are committed to ensuring customer satisfaction.
+                <p>At Joker Relay, we are dedicated to your satisfaction.
                 </p>
               </div>
               <div className="mb-[10px]">
-                <p>However, if you are not completely satisfied with our service, we offer the following refund policy.</p>
+                <p> If you are not completely satisfied with our service, we offer a straightforward refund policy.</p>
               </div>
 
               <div className="mb-[10px]">
-                <p>There are Eligibility for Refunds, Terms and Conditions Policy.</p>
+                <p>Please review our Eligibility for Refunds and Terms and Conditions. </p>
+              </div>
+              <div className="mb-[10px]">
+                <p>Download the document to find all the relevant details.</p>
               </div>
               <div className="mb-[30px]">
-                <p>Please download the document and check the relevant contents.</p>
+                <p>Feel free to adjust any part to better match your website’s tone or style!</p>
               </div>
               <div className="mb-0">
-                <button
+                <a
+                  href="/JokerRelayPolicy.doc"
+                  download
                   className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90"
                 >
                   Get Document
-                </button>
+                </a>
               </div>
             </div>
           </div>
