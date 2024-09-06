@@ -6,9 +6,9 @@ const Faq = () => {
     <section className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
       <div className="container">
         <SectionTitle
-          subtitle="FAQ"
-          title="Any Questions? Answered"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          subtitle="Help"
+          title=" How It Works? "
+          paragraph="Getting Started is Simple and Fast!"
           width="640px"
           center
         />
@@ -16,31 +16,27 @@ const Faq = () => {
         <div className="-mx-4 mt-[60px] flex flex-wrap lg:mt-20">
           <div className="w-full px-4 lg:w-1/2">
             <SingleFaq
-              question="How to use TailGrids?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              number="1"
+              question="Install the Joker Relay Extension"
+              answer="With a straightforward installation process, you can add Joker Relay to your browser with just a single click."
             />
             <SingleFaq
-              question="How to download icons from LineIcons?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <SingleFaq
-              question="Is GrayGrids part of UIdeck?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              number="2"
+              question="Set Your Filters"
+              answer="Customize your booking preferences, including preferred routes, dates, and specific requirements. Our intelligent system does the rest."
             />
           </div>
 
           <div className="w-full px-4 lg:w-1/2">
             <SingleFaq
-              question="Can I use this template for commercial project?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              number="3"
+              question="Relax and Enjoy Your Time"
+              answer="Set your filters and let us handle the hard work while you enjoy your time relaxing or focusing on other important tasks."
             />
             <SingleFaq
-              question="Do you have plan to releasing Play Pro?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <SingleFaq
-              question="Where and how to host this template?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              number="4"
+              question="Let Joker Relay Take Over"
+              answer="Our extension works round the clock to auto-book the best trips for your fleet, ensuring optimal utilization and profitability."
             />
           </div>
         </div>

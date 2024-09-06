@@ -12,17 +12,20 @@ const About = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 max-w-[540px] lg:mb-0">
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
-                  Brilliant Toolkit to Build Next.js SaaS Websites.
+                  What Our Customers Say?
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                  The main thrust is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel discussions and roundtables led by subject
-                  matter experts.
+                  <i>
+                    "Joker Relay has been a game-changer for my business. I no longer have to spend hours booking trips. The extension does it all for me, allowing me to focus on growing my fleet."
+                    <br />
+                  </i>
+                  — Sarah M., Independent Contractor
                   <br /> <br />
-                  The main thrust is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel.
+                  <i>
+                    "The real-time alerts are fantastic. I always know what's happening with my bookings. Plus, using an AWS machine has made the process even faster!"
+                  </i>
+                  <br />
+                  — Alex T., Logistics Manager
                 </p>
 
                 <a
@@ -60,17 +63,19 @@ const About = () => {
                   </div>
 
                   <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
+
                     <div>
-                      <span className="block text-5xl font-extrabold text-white">
-                        09
+                      <span className="block text-3xl font-extrabold text-white">
+                        Joker Relay
                       </span>
-                      <span className="block text-base font-semibold text-white">
-                        We have
+                      <span className="block text-xl font-semibold text-white">
+                        Provides
                       </span>
                       <span className="block text-base font-medium text-white text-opacity-70">
-                        Years of experience
+                        Good Condtion for Booking Trips
                       </span>
                     </div>
+
                     <div>
                       <span className="absolute left-0 top-0 -z-10">
                         <svg
