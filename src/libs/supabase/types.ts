@@ -105,52 +105,22 @@ export interface Database {
       };
       subscriptions: {
         Row: {
-          cancel_at: string | null;
-          cancel_at_period_end: boolean | null;
-          canceled_at: string | null;
-          created: string;
-          current_period_end: string;
-          current_period_start: string;
-          ended_at: string | null;
-          id: string;
-          metadata: Json | null;
-          quantity: number | null;
-          status: Database['public']['Enums']['subscription_status'] | null;
-          trial_end: string | null;
-          trial_start: string | null;
+          subscriptionId: string,
+          trial: boolean,
+          monthly: boolean,
           user_email: string;
         };
         Insert: {
-          cancel_at?: string | null;
-          cancel_at_period_end?: boolean | null;
-          canceled_at?: string | null;
-          created?: string;
-          current_period_end?: string;
-          current_period_start?: string;
-          ended_at?: string | null;
-          id: string;
-          metadata?: Json | null;
-          quantity?: number | null;
-          status?: Database['public']['Enums']['subscription_status'] | null;
-          trial_end?: string | null;
-          trial_start?: string | null;
+          subscriptionId: string,
+          trial: boolean,
+          monthly: boolean,
           user_email: string;
         };
         Update: {
-          cancel_at?: string | null;
-          cancel_at_period_end?: boolean | null;
-          canceled_at?: string | null;
-          created?: string;
-          current_period_end?: string;
-          current_period_start?: string;
-          ended_at?: string | null;
-          id?: string;
-          metadata?: Json | null;
-          quantity?: number | null;
-          status?: Database['public']['Enums']['subscription_status'] | null;
-          trial_end?: string | null;
-          trial_start?: string | null;
-          user_email?: string;
+          subscriptionId: string,
+          trial: boolean,
+          monthly: boolean,
+          user_email: string;
         };
       };
       users: {

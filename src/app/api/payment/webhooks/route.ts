@@ -40,13 +40,6 @@ export async function POST(req: Request) {
         case 'customer.subscription.created':
         case 'customer.subscription.updated':
         case 'customer.subscription.deleted':
-          const subscription = event.data.object as Stripe.Subscription;
-
-          await upsertUserSubscription({
-            subscriptionId: subscription.id,
-            customerEmail: "",
-            isCreateAction: false,
-          });
           break;
         case 'checkout.session.completed':
           const checkoutSession = event.data.object as Stripe.Checkout.Session;

@@ -21,48 +21,46 @@ export async function upsertUserSubscription({
 
   // const { id: userId } = customerData!;
 
-  let userEmail = customerEmail;
 
   const subscription = await stripeAdmin.subscriptions.retrieve(subscriptionId, {
     expand: ['default_payment_method'],
   });
 
-  if (!isCreateAction) {
-    const { data, error: noSubscriptionError } = await supabaseAdminClient
-    .from('subscriptions')
-    .select('user_email')
-    .eq('id', subscription.id)
-    .single()
+  let trial = Boolean(subscription.trial_end), monthly = false;
 
-    if (noSubscriptionError) throw noSubscriptionError;
-    userEmail = data.user_email
+  const { data, error: noSubscriptionError } = await supabaseAdminClient
+  .from('subscriptions')
+  .select('subscriptionId')
+  .eq('user_email', customerEmail)
+
+  if (noSubscriptionError) throw noSubscriptionError;
+  if (data.length === 0) {
+    if (trial) {
+      monthly = false
+    } else {
+      trial = true;
+      monthly = true;
+    }
+  } else {
+    if (!trial) {
+      monthly = true;
+    }
   }
-
-  // Upsert the latest status of the subscription object.
+  
   const subscriptionData = {
-    id: subscription.id,
-    user_email: userEmail,
-    metadata: subscription.metadata,
-    status: subscription.status,
-    // price_id: subscription.items.data[0].price.id,
-    cancel_at_period_end: subscription.cancel_at_period_end,
-    cancel_at: subscription.cancel_at ? toDateTime(subscription.cancel_at).toISOString() : null,
-    canceled_at: subscription.canceled_at ? toDateTime(subscription.canceled_at).toISOString() : null,
-    current_period_start: toDateTime(subscription.current_period_start).toISOString(),
-    current_period_end: toDateTime(subscription.current_period_end).toISOString(),
-    created: toDateTime(subscription.created).toISOString(),
-    ended_at: subscription.ended_at ? toDateTime(subscription.ended_at).toISOString() : null,
-    trial_start: subscription.trial_start ? toDateTime(subscription.trial_start).toISOString() : null,
-    trial_end: subscription.trial_end ? toDateTime(subscription.trial_end).toISOString() : null,
-  };
-
-
-  const data = await supabaseAdminClient.from('subscriptions').upsert([subscriptionData]);
-
-  if (data.error) {
-    throw data.error;
+    user_email: customerEmail,
+    subscriptionId: subscription.id,
+    trial,
+    monthly
   }
-  console.info(`Inserted/updated subscription [${subscription.id}] for user [${userEmail}]`);
+
+
+  const result = await supabaseAdminClient.from('subscriptions').upsert([subscriptionData]);
+
+  if (result.error) {
+    throw result.error;
+  }
+  console.info(`Inserted/updated subscription [${subscription.id}] for user [${customerEmail}]`);
 
   // For a new subscription copy the billing details to the customer object.
   // NOTE: This is a costly operation and should happen at the very end.
