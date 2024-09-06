@@ -14,26 +14,15 @@ const Pricing = () => {
           <SectionTitle
             subtitle="Pricing Table"
             title="Our Pricing Plan"
-            paragraph="Choose a Plan That Fits Your Needs."
+            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
             center
           />
         </div>
-        <div className="flex flex-wrap justify-center -mx-4">
-          <div className="w-full md:w-1/2 px-4"> {/* First half */}
-            <div className="-mx-4 flex flex-wrap justify-center">
-              {pricingData.map((product, i) => (
-                <PricingBox key={i} product={product} />
-              ))}
-            </div>
-          </div>
 
-          <div className="w-full md:w-1/2 px-4"> {/* Second half */}
-            <div className="-mx-4 flex flex-wrap justify-center">
-              {pricingData.map((product, i) => (
-                <PricingBox key={i} product={product} />
-              ))}
-            </div>
-          </div>
+        <div className="-mx-4 flex flex-wrap justify-center">
+          {pricingData.map((product, i) => (
+            <PricingBox key={i} product={product} />
+          ))}     
         </div>
       </div>
     </section>
