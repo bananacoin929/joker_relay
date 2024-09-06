@@ -16,13 +16,13 @@ const About = () => {
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
                   <i>
-                    "Joker Relay has been a game-changer for my business. I no longer have to spend hours booking trips. The extension does it all for me, allowing me to focus on growing my fleet."
+                    `&quot`Joker Relay has been a game-changer for my business. I no longer have to spend hours booking trips. The extension does it all for me, allowing me to focus on growing my fleet.`&quot`
                     <br />
                   </i>
                   — Sarah M., Independent Contractor
                   <br /> <br />
                   <i>
-                    "The real-time alerts are fantastic. I always know what's happening with my bookings. Plus, using an AWS machine has made the process even faster!"
+                    `&quot`The real-time alerts are fantastic. I always know what`&apos`s happening with my bookings. Plus, using an AWS machine has made the process even faster!`&quot`
                   </i>
                   <br />
                   — Alex T., Logistics Manager

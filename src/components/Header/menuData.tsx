@@ -63,13 +63,13 @@ const menuData: Menu[] = [
   //     {
   //       id: 66,
   //       title: "Sign Up Page",
-  //       path: "/signup",
+  //       path: "/",
   //       newTab: false,
   //     },
   //     {
   //       id: 67,
   //       title: "Sign In Page",
-  //       path: "/signin",
+  //       path: "/",
   //       newTab: false,
   //     },
   //     {

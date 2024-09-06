@@ -33,7 +33,7 @@ const SignUp = () => {
       .then((data) => {
         toast.success("Successfully registered");
         setLoading(false);
-        router.push("/signin");
+        router.push("/");
       })
       .catch((err) => {
         toast.error(err.message);
@@ -141,7 +141,7 @@ const SignUp = () => {
               <p className="text-body-secondary text-base">
                 Already have an account?
                 <Link
-                  href="/signin"
+                  href="/"
                   className="pl-2 text-primary hover:underline"
                 >
                   Sign In
