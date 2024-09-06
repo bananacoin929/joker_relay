@@ -16,8 +16,7 @@ const CallToAction = () => {
                   </span>
                 </h2>
                 <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                  There are many variations of passages of Lorem Ipsum but the
-                  majority have suffered in some form.
+                  To enhance speed and efficiency, especially during high-demand periods, we recommend running Joker Relay on an AWS machine. This setup provides faster booking speeds and a more reliable experience.
                 </p>
                 <Link
                   href="/"
