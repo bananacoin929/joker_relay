@@ -105,19 +105,19 @@ export interface Database {
       };
       subscriptions: {
         Row: {
-          subscriptionId: string,
+          subscription_id: string,
           trial: boolean,
           monthly: boolean,
           user_email: string;
         };
         Insert: {
-          subscriptionId: string,
+          subscription_id: string,
           trial: boolean,
           monthly: boolean,
           user_email: string;
         };
         Update: {
-          subscriptionId: string,
+          subscription_id: string,
           trial: boolean,
           monthly: boolean,
           user_email: string;

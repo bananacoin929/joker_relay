@@ -54,6 +54,12 @@ const PricingBox = ({ product }: { product: Price }) => {
         <span className="mb-5 block text-xl font-medium text-dark dark:text-white">
           {product.nickname}
         </span>
+        {product.nickname === "Free trial" ?
+        <h2 className="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
+        <span className="-ml-1 -tracking-[2px]">
+          3 days
+        </span>
+      </h2> :
         <h2 className="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
           <span className="text-xl font-medium">£ </span>
           <span className="-ml-1 -tracking-[2px]">
@@ -66,6 +72,7 @@ const PricingBox = ({ product }: { product: Price }) => {
             Per Month
           </span>
         </h2>
+        }
 
         <div className="mb-[50px]">
           <h3 className="mb-5 text-lg font-medium text-dark dark:text-white">

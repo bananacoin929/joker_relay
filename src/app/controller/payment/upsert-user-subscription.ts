@@ -5,23 +5,11 @@ import { toDateTime } from '@/utils/to-date-time';
 export async function upsertUserSubscription({
   subscriptionId,
   customerEmail,
-  isCreateAction,
 }: {
   subscriptionId: string;
   customerEmail: string;
   isCreateAction?: boolean;
 }) {
-  // Get customer's userId from mapping table.
-  // const { data: customerData, error: noCustomerError } = await supabaseAdminClient
-  //   .from('customers')
-  //   .select('id')
-  //   .eq('stripe_customer_id', customerId)
-  //   .single();
-  // if (noCustomerError) throw noCustomerError;
-
-  // const { id: userId } = customerData!;
-
-
   const subscription = await stripeAdmin.subscriptions.retrieve(subscriptionId, {
     expand: ['default_payment_method'],
   });
@@ -30,7 +18,7 @@ export async function upsertUserSubscription({
 
   const { data, error: noSubscriptionError } = await supabaseAdminClient
   .from('subscriptions')
-  .select('subscriptionId')
+  .select('subscription_id')
   .eq('user_email', customerEmail)
 
   if (noSubscriptionError) throw noSubscriptionError;
@@ -43,18 +31,18 @@ export async function upsertUserSubscription({
     }
   } else {
     if (!trial) {
+      trial = true;
       monthly = true;
     }
   }
   
   const subscriptionData = {
     user_email: customerEmail,
-    subscriptionId: subscription.id,
+    subscription_id: subscription.id,
     trial,
     monthly
   }
-
-
+  
   const result = await supabaseAdminClient.from('subscriptions').upsert([subscriptionData]);
 
   if (result.error) {
